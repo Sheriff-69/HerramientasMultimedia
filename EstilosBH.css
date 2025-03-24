@@ -97,7 +97,7 @@ header  .TextoLeyenda{
     width: 100%;
     height: auto;
     background: rgb(143, 24, 62);
-    background-image: url(imgs/Textura2.png);
+    background-image: url(Imgs/Textura2.png);
     background-size: auto;
     background-position-x: -2px;
     background-position-y: 0px;
@@ -178,7 +178,7 @@ header  .TextoLeyenda{
     width: calc(17%); /* Mantiene el ancho del contenido */
     background: rgb(204, 36, 89);
     padding: 10px;
-    background-image: url(imgs/Textura2.png);
+    background-image: url(Imgs/Textura2.png);
     background-size: auto;
     background-blend-mode: hard-light;
     background-position-y: 0;
@@ -610,23 +610,23 @@ aside ul li a {
 
 .prev-btn {
     left: 10px; 
-    background-image: url('imgs/Fizq.png'); 
+    background-image: url('Imgs/Fizq.png'); 
 }
 
 .next-btn {
     right: 10px;
-    background-image: url('imgs/Fder.png'); 
+    background-image: url('Imgs/Fder.png'); 
 }
 
 .carousel-container::before {
     left: 10px;
-    background-image: url('imgs/left-arrow.png');
+    background-image: url('Imgs/left-arrow.png');
     background-size: cover;
 }
 
 .carousel-container::after {
     right: 10px;
-    background-image: url('imgs/right-arrow.png');
+    background-image: url('Imgs/right-arrow.png');
     background-size: cover;
 }
 
