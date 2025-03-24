@@ -1,0 +1,777 @@
+html, body {
+    height: 100%;  
+    margin: 0;
+}
+
+body {
+    display: flex; 
+    flex-direction: column;
+    overflow-x: hidden;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    background: rgb(0, 0, 0);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#Yandel{
+    position: relative;
+    z-index: 1000;
+}
+
+#Superior{
+
+    header{
+        background: white;
+        color: black;
+        height: 50px;
+        width: 100%;
+        margin: 0px;
+        display: flex;
+        align-items: center;
+        position:fixed;
+        top: 0;
+        left: 0;
+        z-index: 1000; 
+        justify-content: space-between;
+    }
+
+    header img{ /*Imagen del IPN*/
+        position: absolute;
+        left: 5px;
+    }
+
+    header h1{ /*Titulos h1*/
+        margin: 0;
+        padding: 0;
+        font-size: 25px;
+        font-weight: bold;
+    }
+
+    header p{ /*Texto en p*/
+        margin-top: 0px;
+        margin-bottom: 0;
+        font-size: 15px;
+        font-weight: bold;
+        font-style: italic;
+    }
+
+header  .TextoLeyenda{
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+    .TextoDerecha p{
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        font-size: 15px;
+        text-align: right;
+        font-weight: bold;
+        font-style: italic;
+        margin: 0px;
+    }
+
+    .TextoDerecha h1{
+        position: absolute;
+        right: 10px;
+        top: 25px;
+        font-size: 20px;
+        font-weight: bold;
+        margin: 0px;
+    }
+}
+
+#MenuPrincipal{
+    position: fixed;
+    top: 50px;
+    left: 0px;
+    width: 100%;
+    height: auto;
+    background: rgb(143, 24, 62);
+    background-image: url(imgs/Textura2.png);
+    background-size: auto;
+    background-position-x: -2px;
+    background-position-y: 0px;
+    background-blend-mode: hard-light;
+    z-index: 999;
+
+#MenuPrincipal nav{ /*Config de los Menús Iniciales*/
+        color: rgb(143, 24, 62);
+        text-decoration: none;
+        background: rgb(143, 24, 62);
+        height: 100%;
+        width: 100%;
+        text-align: center;
+        font-size: 20px;
+        font-weight: bold;
+        font-family: 'Franklin Gothic Medium', Arial;
+        position: relative;
+        z-index: 1;
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+    }
+    
+    nav a:link,
+    nav a:visited,
+    nav a:hover,
+    nav a:active { /*Config de los menús Situaciones*/
+        color: white;
+        text-decoration: none;
+        text-align: center;
+        display: inline-block;
+        font-size: 20px;
+        font-weight: bold;
+        font-family: 'Franklin Gothic Medium', Arial;
+        position: relative;
+        z-index: 1;
+    }
+    
+    nav ul {
+        display: flex;
+        justify-content: center;
+        padding: 0; 
+        margin: 0; 
+        list-style: none; 
+    } 
+    
+    nav ul li{ /*Config Menús iniciales*/
+        color: rgb(255, 255, 255);
+        list-style: none;
+        padding: 0px;
+        margin: 0 2px;
+        display: inline-block;
+        font-weight: bold;
+    }
+    
+    nav ul li a:link,
+    nav ul li a:visited,
+    nav ul li a:hover,
+    nav ul li a:active { /*Config Menús situaciones*/
+        color: white;
+        list-style: none;
+        margin: 10px;
+        display: inline-block;
+        padding: 5px;
+        font-weight: bold;
+    }
+}
+
+#Medio {
+    display: flex;
+    width: 100%;
+    flex: 1;
+    margin-top: 100px;
+}
+
+
+#MenuLateral{
+    width: calc(17%); /* Mantiene el ancho del contenido */
+    background: rgb(204, 36, 89);
+    padding: 10px;
+    background-image: url(imgs/Textura2.png);
+    background-size: auto;
+    background-blend-mode: hard-light;
+    background-position-y: 0;
+
+#prof{
+    text-align: center;
+
+    .article p{
+        font-style: italic;
+        font-family: 'Trebuchet';
+        font-weight: bold;
+        font-size: 19px;
+        margin-top: -15px;
+    }
+    .article h1{
+    font-size: 28px;
+    margin-top: -25px;
+    }
+}
+
+    .article{ /*Letras Mnús Izq*/
+        color: white;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        padding-bottom: 10px;
+    }
+
+    .article a:link,
+    .article a:visited,
+    .article a:hover,
+    .article a:active { 
+    color: white;
+    list-style: none;
+    margin: 0px;
+    display: inline-block;
+    padding: 0px;
+    font-weight: normal;
+    text-decoration: none; /* Esta propiedad elimina el subrayado */
+}
+
+    .article img{
+        position: relative;
+        top: -30px;
+        left: 0px;
+    }
+    
+    .article:first-child{ /*Margenes Izq*/
+        padding-top: 40px;
+    }
+    
+    .article h1{ /*Txt h2 Izq*/
+        font-size: 35px;
+    }
+
+    .article h2{ /*Txt h2 Izq*/
+        font-size: 25px;
+    }
+
+    .article h3{ /*Txt h2 Izq*/
+        margin-top: 5px;
+        font-size: 20px;
+    }
+
+    .article .htar {
+        margin-top: 8px;
+        margin-left: 30px;
+        font-size: 15px;
+    }
+
+    #changos{
+        text-align: center;
+    
+        .article p{
+            font-style: italic;
+            font-family: 'Trebuchet';
+            font-weight: bold;
+            font-size: 19px;
+            margin-top: -15px;
+        }
+        .article h1{
+        font-size: 28px;
+        margin-top: -25px;
+        }
+    }
+}
+
+#EspaciodeTrabajo{
+    width: calc(83%);
+   background: rgb(255, 255, 255);
+    padding: 10px;
+    overflow: hidden;
+    flex-grow: 1;
+}
+
+.profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 0px;
+    padding: 0px;
+}
+
+.profile img {
+    margin-bottom: 0px;
+}
+
+
+.profile a {
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.profile h1 {
+    font-size: 15px;
+    color: #333;
+    margin-bottom: 25px;
+}
+
+.profile p {
+    font-size: 20px;
+    font-weight: bolder;
+    color: #333;
+    line-height: 35px;
+}
+
+aside h1{
+    font-size: 45px;
+    font-weight: bold;
+}
+
+aside p{
+    font-size: 20px;
+}
+
+aside ul {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+
+aside ul li {
+    list-style: none;
+    text-align: center;
+    margin: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 200px;
+    justify-content: center; 
+    height: 380px;
+}
+
+aside ul li img {
+    margin-top: 25px;
+    margin-bottom: 5px;
+    width: 200px; 
+}
+
+aside ul li a {
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    color: black; 
+    text-align: center;
+}
+
+.cuadro{
+    flex-wrap: wrap;
+
+}
+
+.cuadro ul{
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    padding-left: 0px;
+}
+
+.cuadro li {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 50%;
+    margin: 0%;
+    padding: 0%;
+}
+
+.cuadro ul li{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    align-items: center;
+    width: calc(50%);
+    margin: 10px 0;
+    padding: 0%;
+}
+
+.cuadro ul li .texto{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.cuadro ul li img{
+    margin-right: 10px;
+    width: 100%;
+    max-width: 220px;
+    margin-top: -5px;
+    margin-bottom: -5px;
+}
+
+.cuadro ul li a {
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    margin: 0%;
+    padding: 0px;
+    height: 100%;
+    width: 100%;
+}
+
+.cuadro div {
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+    height: 100%;
+}
+
+.cuadro .texto {
+    display: flex;
+    flex-direction: column; 
+    text-align: left;
+    justify-content: flex-start;
+
+}
+
+.cuadro ul li h1 {
+    font-size: 15px;
+    color: #333;
+    margin-bottom: 25px;
+    text-align: left;
+}
+
+.cuadro ul li h3 {
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: left;
+    display: block;
+    margin: 0%;
+}
+
+.cuadro ul li p {
+    font-size: 20px;
+    font-weight: 600;
+    color: #333;
+    line-height: 26px;
+    text-align: left;
+    margin-bottom: 0;
+    margin-top: 5px;
+}
+--------
+.presentacion{
+    flex-wrap: wrap;
+
+}
+
+.presentacion ul{
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    padding-left: 0px;
+}
+
+.presentacion li {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 50%;
+    margin: 0%;
+    padding: 0%;
+}
+
+.presentacion ul li{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    align-items: center;
+    width: calc(50%);
+    margin: 20px 0;
+    padding: 0%;
+}
+
+.presentacion ul li .texto{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.presentacion ul li img{
+    margin-right: 10px;
+    width: 100%;
+    max-width: 220px;
+    margin-top: -5px;
+    margin-bottom: -5px;
+}
+
+.presentacion ul li a {
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    margin: 0%;
+    padding: 0px;
+    height: 100%;
+    width: 100%;
+}
+
+.presentacion div {
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+    height: 100%;
+}
+
+.presentacion .texto {
+    display: flex;
+    flex-direction: column; 
+    text-align: left;
+    justify-content: flex-start;
+
+}
+
+.presentacion ul li h1 {
+    font-size: 15px;
+    color: #333;
+    margin-bottom: 25px;
+    text-align: left;
+}
+
+.presentacion ul li h3 {
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: left;
+    display: block;
+    margin: 0%;
+}
+
+.presentacion ul li p {
+    font-size: 20px;
+    font-weight: 600;
+    color: #333;
+    line-height: 26px;
+    text-align: left;
+    margin-bottom: 0;
+    margin-top: 5px;
+}
+--------
+#Carrusel {
+    width: 100%;
+    margin-top: 60px;
+    text-align: center;
+}
+
+.carousel-container {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.carousel-slide {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-slide a {
+    flex-shrink: 0;
+    width: 100%;
+    pointer-events: auto;
+}
+
+.carousel-slide img {
+    width: 100%;
+    height: auto;
+    pointer-events: auto;
+}
+
+.carousel-container::before, .carousel-container::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.prev-btn, .next-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgb(255, 255, 255);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 10;
+    border: none;
+    background-size: cover;
+    pointer-events: all;
+}
+
+.prev-btn {
+    left: 10px; 
+    background-image: url('imgs/Fizq.png'); 
+}
+
+.next-btn {
+    right: 10px;
+    background-image: url('imgs/Fder.png'); 
+}
+
+.carousel-container::before {
+    left: 10px;
+    background-image: url('imgs/left-arrow.png');
+    background-size: cover;
+}
+
+.carousel-container::after {
+    right: 10px;
+    background-image: url('imgs/right-arrow.png');
+    background-size: cover;
+}
+
+#upload{
+    margin: 0;
+    padding-top: 5px;
+    position: relative;
+    right: 0px;
+    text-align: right;
+    justify-content: flex-end;
+}
+
+.login-container {
+    position: relative;
+    margin-top: 50px;
+    left: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+}
+
+.login-container h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.login-container label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.login-container input[type="text"],
+.login-container input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.login-container input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login-container input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+.error-message {
+    color: red;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+#Derechos footer{
+    background: rgb(48, 48, 48);
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.contenido{
+    display: flex;
+    align-items: flex-start;
+    padding: 0px;
+    margin: 0px;
+}
+
+.contenidotexto{
+    text-align: left;
+    margin-left: 5px;
+    transform: translateY(+5px);
+}
+
+.contenidotexto h1{
+    margin: 0;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 22px;
+}
+
+.contenidotexto h2{
+    margin: 0;
+    font-size: 12px;
+    line-height: 20px;
+}
+
+.contenidotexto h3{
+    margin: 0;
+    font-size: 10px;
+    line-height: 4px;
+}
+
+.Contacto{
+    margin: 0;
+    position: absolute;
+    top: 20px;
+    right: 10px;
+    text-align: right;
+    align-self: center;
+    padding-top: 5px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+}
+
+.Contacto p{
+    margin: 0;
+    padding: 0px;
+    font-size: 15px;
+    line-height: 18px;
+    font-weight: bold;
+}
+
+.infocentro{
+    text-align: center;
+    margin-top: 50px;
+}
+
+.infocentro p{
+    text-align: center;
+    margin-top: 0px;
+}
+
+footer img{
+    margin-right: 0px;
+}
