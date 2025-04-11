@@ -48,3 +48,36 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+
+
+
+
+document.addEventListener('DOMContentLoaded', () => {
+
+    function adjustMedioHeight() {
+        const medio = document.getElementById('Medio');
+        medio.style.height = 'auto';
+        const dropdowns = document.querySelectorAll('.dropdown, .submenu');
+        let totalHeight = 0;
+        dropdowns.forEach(function(dropdown) {
+            if (dropdown.style.display === 'block' || dropdown.style.display === '') {
+                totalHeight += dropdown.scrollHeight;
+            }
+        });
+        medio.style.height = `${totalHeight}px`;
+    }
+    document.querySelectorAll('.dropdown-toggle').forEach(function(toggle) {
+        toggle.addEventListener('click', function() {
+            const dropdown = this.nextElementSibling;
+            if (dropdown) {
+                
+                dropdown.style.display = (dropdown.style.display === 'block') ? 'none' : 'block';
+                adjustMedioHeight();
+            }
+        });
+    });
+});
+
+
+
+
