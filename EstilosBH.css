@@ -406,7 +406,10 @@ aside ul li a {
 
 .cuadro{
     flex-wrap: wrap;
+}
 
+.cuadro h2{
+    font-size: 35px;
 }
 
 .cuadro ul{
@@ -486,7 +489,7 @@ aside ul li a {
 }
 
 .cuadro ul li h3 {
-    font-size: 30px;
+    font-size: 25px;
     font-weight: bold;
     text-decoration: none;
     text-align: left;
