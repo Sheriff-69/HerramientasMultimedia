@@ -81,3 +81,27 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
+document.addEventListener("DOMContentLoaded", function () {
+    const sections = document.querySelectorAll("section[id]");
+    const navLinks = document.querySelectorAll('#MenuLateral a');
+
+    function onScroll() {
+        let scrollPos = window.scrollY || document.documentElement.scrollTop;
+        let current = "";
+
+        sections.forEach(section => {
+            if (scrollPos >= section.offsetTop - 110) {
+                current = section.getAttribute("id");
+            }
+        });
+
+        navLinks.forEach(link => {
+            link.classList.remove("active");
+            if (link.getAttribute("href") === "#" + current) {
+                link.classList.add("active");
+            }
+        });
+    }
+
+    window.addEventListener("scroll", onScroll);
+});

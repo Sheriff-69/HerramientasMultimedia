@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 html, body {
     height: 100%;  
     margin: 0;
@@ -97,7 +101,7 @@ header  .TextoLeyenda{
     width: 100%;
     height: auto;
     background: rgb(143, 24, 62);
-    background-image: url(imgs/Textura2.png);
+    background-image: url(Imgs/Textura2.png);
     background-size: auto;
     background-position-x: -2px;
     background-position-y: 0px;
@@ -171,13 +175,61 @@ header  .TextoLeyenda{
     width: 100%;
     flex: 1;
     margin-top: 100px;
+    transition: height 0.3s ease;
 }
 
+/*--------------*/
+#MenuLateral a.active {
+    all: unset;
+    color: white !important;
+    font-weight: bold !important;
+    border-left: 5px solid white !important;
+    padding-left: 5px !important;
+    font-size: 17px !important;
+}
+
+.toggle-unidad {
+  width: 100%;
+  background: none;
+  border: none;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  text-align: left;
+  padding: 8px;
+  cursor: pointer;
+}
+
+.toggle-unidad:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.contenido-unidad {
+  display: none;
+  padding-left: 10px;
+}
+
+.contenido-unidad a {
+  color: white;
+  text-decoration: none;
+  display: block;
+  padding: 4px 0;
+}
+
+.contenido-unidad a:hover {
+  text-decoration: underline;
+}
 
 #MenuLateral{
-    width: calc(17%); /* Mantiene el ancho del contenido */
-    background: rgb(32, 1, 69);
+    width: 17%;
+    background: rgb(204, 36, 89);
+    position: fixed;
+    top:0;
+    left:0;
+    max-height: 100vh;
     padding: 10px;
+    overflow-y: auto;
+
     background-image: url(imgs/Textura2.png);
     background-size: auto;
     background-blend-mode: hard-light;
@@ -195,15 +247,19 @@ header  .TextoLeyenda{
     }
     .article h1{
     font-size: 28px;
-    margin-top: -25px;
+    margin-top: 0px;
+    }
+
+    .article:first-child{ /*Margenes Izq*/
+        padding-top: 40px;
     }
 }
 
     .article{ /*Letras Mnús Izq*/
         color: white;
-        margin-top: 15px;
+        margin-top: 0px;
         margin-bottom: 15px;
-        padding-bottom: 10px;
+        padding-bottom: 50px;
     }
 
     .article a:link,
@@ -216,7 +272,7 @@ header  .TextoLeyenda{
     display: inline-block;
     padding: 0px;
     font-weight: normal;
-    text-decoration: none; /* Esta propiedad elimina el subrayado */
+    text-decoration: none;
 }
 
     .article img{
@@ -226,7 +282,7 @@ header  .TextoLeyenda{
     }
     
     .article:first-child{ /*Margenes Izq*/
-        padding-top: 40px;
+        padding-top: 0px;
     }
     
     .article h1{ /*Txt h2 Izq*/
@@ -240,6 +296,12 @@ header  .TextoLeyenda{
     .article h3{ /*Txt h2 Izq*/
         margin-top: 5px;
         font-size: 20px;
+    }
+
+    .article .htar {
+        margin-top: 8px;
+        margin-left: 30px;
+        font-size: 15px;
     }
 
     #changos{
@@ -259,14 +321,67 @@ header  .TextoLeyenda{
     }
 }
 
+.dropdown-toggle {
+    font-size: 20px;
+    padding: 5px 0;
+}
+
+.dropdown {
+    display: none;
+}
+
+.dropdown-toggle:hover + .dropdown {
+    display: block;
+}
+
+.dropdown:hover {
+    display: block;
+}
+
+.submenu {
+    display: none;
+    margin-left: 20px;
+}
+
+.dropdown .dropdown-toggle:hover + .submenu,
+.dropdown:hover .submenu {
+    display: block;
+}
+
+.dropdown-toggle:hover + .dropdown {
+    display: block;
+}
+
+.dropdown:hover {
+    display: block;
+}
+
+.submenu {
+    display: none;
+}
+
+.dropdown .dropdown-toggle:hover + .submenu,
+.dropdown:hover .submenu {
+    display: block;
+}
+
+/*---------------*/
+.unidad-card {
+    background-color: #d3cece;
+    padding: 5px;
+    margin-bottom: 15px;
+    border-radius: 10px; 
+    box-shadow: 0 5px 3px rgba(0, 0, 0, 0.7); 
+    border: 5px solidrgb(255, 20, 20)0;
+}
+
 #EspaciodeTrabajo{
     width: calc(83%);
-    background-image: url(Ideas/Elpo.gif);
-    background-size: contain;
+    margin-left: 17%;
+   background: rgb(255, 255, 255);
     padding: 10px;
     overflow: hidden;
     flex-grow: 1;
-    color: #fff;
 }
 
 .profile {
@@ -291,23 +406,23 @@ header  .TextoLeyenda{
 
 .profile h1 {
     font-size: 15px;
-    color: #ffffff;
+    color: #333;
     margin-bottom: 25px;
 }
 
 .profile p {
     font-size: 20px;
     font-weight: bolder;
-    color: #ffffff;
+    color: #333;
     line-height: 35px;
 }
 
-aside h1{ /*Txt h1 espacio de trabajo*/
+aside h1{
     font-size: 45px;
     font-weight: bold;
 }
 
-aside p{ /*Txt p espacio de trabajo*/
+aside p{
     font-size: 20px;
 }
 
@@ -340,91 +455,349 @@ aside ul li a {
     font-size: 16px;
     font-weight: bold;
     text-decoration: none;
-    color: rgb(255, 255, 255); 
+    color: black; 
     text-align: center;
 }
 
-.tareas {
+.cuadro{
+    flex-wrap: wrap;
+}
+
+.cuadro h2{
+    font-size: 35px;
+}
+
+.cuadro ul{
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    padding-left: 0px;
+}
+
+.cuadro li {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 50%;
+    margin: 0%;
+    padding: 0%;
+}
+
+.cuadro ul li{
+    list-style: none;
     display: flex;
     flex-direction: column;
+    height: auto;
     align-items: center;
-    margin: 0px;
-    padding: 0px;
-    width: 50%;
-    height: 100%;
-}
-
-.tareas div {
-    display: flex;
-    align-items: flex-start;
-    width: 100%;
-}
-
-.tareas li {
-    display: flex;
-    align-items: center;
+    width: calc(50%);
     margin: 15px 0;
-    width: 100%;
+    padding: 0%;
 }
 
-.tareas img {
+.cuadro ul li .texto{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.cuadro ul li img{
     margin-right: 10px;
-    width: 200px;
+    width: 100%;
+    max-width: 220px;
     margin-top: -5px;
     margin-bottom: -5px;
 }
 
-.tareas .texto {
-    display: flex;
-    flex-direction: column; 
-    text-align: left;
-    flex-grow: 1;
-    justify-content: flex-start;
-}
-
-.tareas a {
+.cuadro ul li a {
     font-size: 30px;
     font-weight: bold;
     text-decoration: none;
     text-align: left;
-    display: block;
+    display: flex;
+    flex-direction: column;
+    margin: 0%;
+    padding: 0px;
+    height: 100%;
+    width: 100%;
 }
 
-.tareas h1 {
+.cuadro div {
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+    height: 100%;
+}
+
+.cuadro .texto {
+    display: flex;
+    flex-direction: column; 
+    text-align: left;
+    justify-content: flex-start;
+
+}
+
+.cuadro ul li h1 {
     font-size: 15px;
-    color: #ffffff;
+    color: #333;
     margin-bottom: 25px;
     text-align: left;
 }
 
-.tareas h3 {
-    font-size: 30px;
+.cuadro ul li h3 {
+    font-size: 25px;
     font-weight: bold;
     text-decoration: none;
     text-align: left;
     display: block;
-    margin-top: 0px;
+    margin: 0%;
 }
 
-.tareas p {
+.cuadro ul li p {
     font-size: 20px;
     font-weight: 600;
     color: #333;
     line-height: 26px;
     text-align: left;
     margin-bottom: 0;
-    margin-top: 0px;
+    margin-top: 5px;
+}
+--------
+.presentacion{
+    flex-wrap: wrap;
+
 }
 
+.presentacion ul{
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    padding-left: 0px;
+}
 
+.presentacion li {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 50%;
+    margin: 0%;
+    padding: 0%;
+}
 
-#Carrusel {
+.presentacion ul li{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    align-items: center;
+    width: calc(50%);
+    margin: 20px 0;
+    padding: 0%;
+}
+
+.presentacion ul li .texto{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.presentacion ul li img{
+    margin-right: 10px;
     width: 100%;
+    max-width: 220px;
+    margin-top: -5px;
+    margin-bottom: -5px;
+}
+
+.presentacion ul li a {
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    margin: 0%;
+    padding: 0px;
+    height: 100%;
+    width: 100%;
+}
+
+.presentacion div {
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+    height: 100%;
+}
+
+.presentacion .texto {
+    display: flex;
+    flex-direction: column; 
+    text-align: left;
+    justify-content: flex-start;
+
+}
+
+.presentacion ul li h1 {
+    font-size: 15px;
+    color: #333;
+    margin-bottom: 25px;
+    text-align: left;
+}
+
+.presentacion ul li h3 {
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: left;
+    display: block;
+    margin: 0%;
+}
+
+.presentacion ul li p {
+    font-size: 20px;
+    font-weight: 600;
+    color: #333;
+    line-height: 26px;
+    text-align: left;
+    margin-bottom: 0;
+    margin-top: 5px;
+}
+
+.bienvv h1{
+    display: flex;
+    font-size: 45px;
+    text-align: center;
+    justify-content: center;
+}
+
+.bienvv p{
+    margin-top: 15px;
+    display: flex;
+    font-size: 22px;
+    text-align: center;
+    justify-content: center;
+}
+
+.bienvv h3{
+    font-size: 35px;
+    margin-top: 35px;
+}
+
+.tareas{
+    font-size: 40px;
+}
+
+.tareass{
+    font-size: 21px;
+}
+
+.medios{
+    font-size: 27px;
+    font-weight: bold;
+}
+
+.iribaslf{
+    z-index: 1;
+    position: relative;
+    overflow: hidden;
+}
+
+.iribaslf::before{
+    content: '';
+    background-image: url(TareasI/I1.jpg);
+    background-position: right;
+    background-size: 70%;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    clip-path: circle(60% at right);
+    opacity: 1;
+    filter: blur(0px);
+}
+
+.iribaslf2{
+    z-index: 1;
+    position: relative;
+    overflow: hidden;
+}
+
+.iribaslf2::before{
+    content: '';
+    background-image: url(TareasI/G1.gif);
+    background-position: calc(100% + 100%);
+    background-size: 80%;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    clip-path: circle(60% at right);
+    opacity: 1;
+    filter: blur(0px);
+}
+
+.iribasrt{
+    z-index: 1;
+    position: relative;
+    overflow: hidden;
+    text-align: right;
+}
+
+.iribasrt::before{
+    content: '';
+    background-image: url(TareasI/I2.jpg);
+    background-position: left;
+    background-size: 73%;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    clip-path: circle(60% at left);
+    opacity: 1;
+    filter: blur(0px);
+}
+
+.iribasrt2{
+    z-index: 1;
+    position: relative;
+    overflow: hidden;
+    text-align: right;
+}
+
+.iribasrt2::before{
+    content: '';
+    background-image: url(TareasI/I3.jpg);
+    background-position: left;
+    background-size: 80%;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    clip-path: circle(60% at left);
+    opacity: 1;
+    filter: blur(0px);
+}
+
+--------
+#Carrusel {
+    width: calc(83%);
     margin-top: 60px;
     text-align: center;
 }
 
 .carousel-container {
+    margin-top: 35px;
     position: relative;
     width: 100%;
     max-width: 100%;
@@ -486,18 +859,6 @@ aside ul li a {
 .next-btn {
     right: 10px;
     background-image: url('imgs/Fder.png'); 
-}
-
-.carousel-container::before {
-    left: 10px;
-    background-image: url('imgs/left-arrow.png');
-    background-size: cover;
-}
-
-.carousel-container::after {
-    right: 10px;
-    background-image: url('imgs/right-arrow.png');
-    background-size: cover;
 }
 
 #upload{
@@ -577,6 +938,7 @@ aside ul li a {
     width: 100%;
     box-sizing: border-box;
     position: relative;
+    z-index: 1;
 }
 
 .contenido{

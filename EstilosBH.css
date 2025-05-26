@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 html, body {
     height: 100%;  
     margin: 0;
@@ -175,15 +179,25 @@ header  .TextoLeyenda{
 }
 
 /*--------------*/
+#MenuLateral a.active {
+    all: unset;
+    color: white !important;
+    font-weight: bold !important;
+    border-left: 5px solid white !important;
+    padding-left: 5px !important;
+    font-size: 17px !important;
+}
 
 #MenuLateral{
-    width: calc(17%); /* Mantiene el ancho del contenido */
+    width: calc(17%);
     background: rgb(204, 36, 89);
     position: fixed;
     top:100px;
     left:0;
     height: calc(100vh - 100px);
     padding: 10px;
+    overflow-y: auto;
+
     background-image: url(imgs/Textura2.png);
     background-size: auto;
     background-blend-mode: hard-light;
@@ -320,6 +334,15 @@ header  .TextoLeyenda{
 }
 
 /*---------------*/
+.unidad-card {
+    background-color: #d3cece;
+    padding: 5px;
+    margin-bottom: 15px;
+    border-radius: 10px; 
+    box-shadow: 0 5px 3px rgba(0, 0, 0, 0.7); 
+    border: 5px solidrgb(255, 20, 20)0;
+}
+
 #EspaciodeTrabajo{
     width: calc(83%);
     margin-left: 17%;
@@ -409,7 +432,8 @@ aside ul li a {
 }
 
 .cuadro h2{
-    font-size: 35px;
+    font-size: 40px;
+    font-family:'Helvetica';
 }
 
 .cuadro ul{
