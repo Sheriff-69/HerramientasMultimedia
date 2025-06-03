@@ -352,6 +352,111 @@ header  .TextoLeyenda{
     flex-grow: 1;
 }
 
+.hero-section {
+    position: relative;
+  clip-path: ellipse(100% 70% at 50% 30%);
+  color: rgb(0, 0, 0);
+  padding: 60px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.hero-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url('Imgs/Fondotareas.jpg') center/contain repeat;
+  opacity: 30%;
+  z-index: 0;
+}
+
+.hero-section::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 200px;
+  background: linear-gradient(to bottom, transparent, #ffffff);
+  z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+  z-index: 2;
+  width: max-content;
+  max-width: 90%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  margin-top: -50px;
+}
+
+.main-title {
+  font-size: 4.2rem;
+  font-weight: bold;
+}
+
+.subtitle {
+  font-size: 1.3rem;
+  margin-top: 20px;
+  opacity: 0.9;
+}
+
+.content-container {
+    width: calc(83%);
+    margin-left: 17%;
+  padding: 10px 17px;
+  background-color: white;
+}
+
+.content-section {
+  margin-bottom: 60px;
+   scroll-margin-top: 100px;
+}
+
+.content-section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 5px;
+}
+
+.content-section h3 {
+  font-size: 1.4rem;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  color: #555;
+}
+
+/* Caja de resumen destacada */
+.summary-box {
+  background-color: #fffbea;
+  border-left: 4px solid #f5c518;
+  padding: 20px;
+  border-radius: 6px;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .hero-section {
+    clip-path: none;
+    padding: 60px 10px;
+  }
+
+  .main-title {
+    font-size: 2.2rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
+
+  .content-container {
+    padding: 20px 15px;
+  }
+}
+
 .profile {
     display: flex;
     flex-direction: column;
@@ -434,6 +539,7 @@ aside ul li a {
 .cuadro h2{
     font-size: 40px;
     font-family:'Helvetica';
+    margin-bottom: 25px;
 }
 
 .cuadro ul{
@@ -528,7 +634,7 @@ aside ul li a {
     line-height: 26px;
     text-align: left;
     margin-bottom: 0;
-    margin-top: 5px;
+    margin-top: 20px;
 }
 --------
 .presentacion{
