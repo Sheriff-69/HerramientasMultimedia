@@ -334,8 +334,26 @@ header  .TextoLeyenda{
 }
 
 /*---------------*/
-.unidad-card {
-    background-color: #d3cece;
+.unidad-card1 {
+    background:linear-gradient(rgb(215, 215, 215),rgb(120, 120, 120));
+    padding: 5px;
+    margin-bottom: 15px;
+    border-radius: 10px; 
+    box-shadow: 0 5px 3px rgba(0, 0, 0, 0.7); 
+    border: 5px solidrgb(255, 20, 20)0;
+}
+
+.unidad-card2 {
+    background:linear-gradient(rgb(244, 242, 210),rgb(227, 227, 129));
+    padding: 5px;
+    margin-bottom: 15px;
+    border-radius: 10px; 
+    box-shadow: 0 5px 3px rgba(0, 0, 0, 0.7); 
+    border: 5px solidrgb(255, 20, 20)0;
+}
+
+.unidad-card3 {
+    background:linear-gradient(rgb(191, 212, 219),rgb(150, 185, 208));
     padding: 5px;
     margin-bottom: 15px;
     border-radius: 10px; 
@@ -398,7 +416,8 @@ header  .TextoLeyenda{
 }
 
 .subtitle {
-  font-size: 1.3rem;
+  font-size: 1.55rem;
+  font-weight: bold;
   margin-top: 20px;
   opacity: 0.9;
 }
@@ -416,17 +435,27 @@ header  .TextoLeyenda{
 }
 
 .content-section h2 {
-  font-size: 1.8rem;
+  font-size: 2.4rem;
   margin-bottom: 10px;
   border-bottom: 2px solid #ccc;
   padding-bottom: 5px;
 }
 
 .content-section h3 {
-  font-size: 1.4rem;
-  margin-top: 20px;
-  margin-bottom: 10px;
-  color: #555;
+  font-size: 1.8rem;
+  margin-top: 22px;
+  margin-bottom: 2px;
+  color: #515151;
+}
+
+.content-section h4 {
+  font-size: 1.2rem;
+  color: #2d2d2d;
+}
+
+.content-section p {
+  font-size: 1.3rem;
+  color: #000000;
 }
 
 /* Caja de resumen destacada */
@@ -455,6 +484,56 @@ header  .TextoLeyenda{
   .content-container {
     padding: 20px 15px;
   }
+}
+
+.imagen-central {
+  text-align: center;
+  margin: 15px 0;
+}
+
+.imagen-central img {
+  max-width: 90%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 10px 8px rgba(0, 0, 0, 0.55);
+}
+
+.imagen-central figcaption {
+  font-size: 0.9rem;
+  color: #555;
+  margin-top: 8px;
+}
+
+.imagen-lateral {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  margin: 25px 0;
+}
+
+.imagen-lateral p {
+  display: block;
+  width: 100%;
+}
+
+.imagen-lateral img {
+  max-width: 750px;
+  border-radius: 12px;
+  box-shadow: 0 10px 8px rgba(0, 0, 0, 0.55);
+}
+
+.imagen-lateral .texto2dp {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.imagen-lateral.izquierda {
+  flex-direction: row;
+}
+
+.imagen-lateral.derecha {
+  flex-direction: row-reverse;
 }
 
 .profile {
