@@ -10,18 +10,14 @@ html, body {
 body {
     display: flex; 
     flex-direction: column;
-    overflow-x: hidden;
+    background: rgb(0, 0, 0);
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 *{
     box-sizing: border-box;
     margin: 0px;
     padding: 0px;
-}
-
-body{
-    background: rgb(0, 0, 0);
-    font-family: Arial, Helvetica, sans-serif;
 }
 
 #Yandel{
@@ -189,19 +185,20 @@ header  .TextoLeyenda{
 }
 
 #MenuLateral{
-    width: calc(17%);
+    width: 17%;
+    padding-top: 5px;
     background: rgb(204, 36, 89);
-    position: fixed;
+    position: sticky;
     top:100px;
-    left:0;
     height: calc(100vh - 100px);
-    padding: 10px;
+    padding: 15px;
     overflow-y: auto;
-
     background-image: url(imgs/Textura2.png);
     background-size: auto;
     background-blend-mode: hard-light;
     background-position-y: 0;
+    z-index: 1;
+
 
 #prof{
     text-align: center;
@@ -363,7 +360,6 @@ header  .TextoLeyenda{
 
 #EspaciodeTrabajo{
     width: calc(83%);
-    margin-left: 17%;
    background: rgb(255, 255, 255);
     padding: 10px;
     overflow: hidden;
@@ -424,14 +420,13 @@ header  .TextoLeyenda{
 
 .content-container {
     width: calc(83%);
-    margin-left: 17%;
   padding: 10px 17px;
   background-color: white;
 }
 
 .content-section {
   margin-bottom: 60px;
-   scroll-margin-top: 100px;
+  scroll-margin-top: 100px;
 }
 
 .content-section h2 {
@@ -1091,7 +1086,7 @@ aside ul li a {
     flex-direction: column;
     width: 100%;
     box-sizing: border-box;
-    position: relative;
+    position: relative; /*static*/
     z-index: 1;
 }
 
@@ -1161,3 +1156,417 @@ aside ul li a {
 footer img{
     margin-right: 0px;
 }
+
+#workspace {
+  width: 100%;
+  max-width: none;
+  box-sizing: border-box;
+}
+
+/* Base para todas las fichas */
+.workspace-card {
+  margin-bottom: 30px;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+  background-color: #fff;
+  overflow: hidden;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+
+  
+  margin-bottom: 60px;
+  scroll-margin-top: 100px;
+}
+
+.workspace-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.12);
+}
+
+/* Común para imágenes dentro de la ficha */
+.workspace-card img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px 12px 0 0;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.workspace-card:hover img {
+  transform: scale(1.05);
+}
+
+/* 1. Intro card - imagen arriba, título y texto centrados */
+.intro-card img {
+  display: block;
+  margin: 0 auto;
+  max-width: 70%;
+  height: auto;
+  border-radius: 12px;
+}
+
+
+.intro-card {
+  text-align: center;
+  padding: 30px 30px 40px;
+}
+
+.intro-card h1 {
+  font-size: 2.8rem;
+  margin: 10px 0 12px;
+  color: #003d80;
+  font-weight: 700;
+}
+
+.intro-card p {
+  font-size: 1.2rem;
+  line-height: 1.65;
+  color: #444;
+  max-width: 70%;
+  margin: 0 auto;
+  font-weight: 500;
+}
+
+/* 2. Work card style 1 - imagen a la izquierda, texto a la derecha */
+.work-card.style1 {
+  display: flex;
+  align-items: center;
+  padding: 20px 30px;
+  gap: 25px;
+}
+
+.work-card.style1 img {
+  flex: 0 0 45%;
+  border-radius: 12px;
+  max-height: 220px;
+  object-fit: cover;
+}
+
+.work-card.style1 .content {
+  flex: 1;
+}
+
+.work-card.style1 h2 {
+  font-size: 1.9rem;
+  color: #2563eb;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.work-card.style1 p {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #555;
+}
+
+/* 3. Work card style 2 - imagen a la derecha, texto a la izquierda */
+.work-card.style2 {
+  display: flex;
+  align-items: center;
+  padding: 20px 30px;
+  gap: 25px;
+  flex-direction: row-reverse;
+}
+
+.work-card.style2 img {
+  flex: 0 0 45%;
+  border-radius: 12px;
+  max-height: 220px;
+  object-fit: cover;
+}
+
+.work-card.style2 .content {
+  flex: 1;
+}
+
+.work-card.style2 h2 {
+  font-size: 1.9rem;
+  color: #1e40af;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.work-card.style2 p {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #555;
+}
+
+/* --- STYLE 3: Imagen de fondo con texto overlay --- */
+.workspace-card.style3 .background-image {
+  position: relative;
+  width: 100%;
+  height: auto;
+  background-size: cover;
+  background-position: center;
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.workspace-card.style3 .overlay-text {
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #f1f1f1;
+  padding: 20px 30px;
+  border-radius: 10px;
+  max-width: 90%;
+  text-align: center;
+  box-shadow: 0 0 15px rgba(0,0,0,0.6);
+}
+
+.workspace-card.style3 h2 {
+  margin-bottom: 12px;
+  font-size: 1.9rem;
+  font-weight: 700;
+}
+
+.workspace-card.style3 p {
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+/* 5. Work card style 4 - imagen de fondo con overlay, texto sobre imagen */
+.work-card.style4 {
+  position: relative;
+  color: #fff;
+  padding: 50px 30px 40px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.work-card.style4 img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.5);
+  transition: filter 0.3s ease;
+  z-index: 0;
+}
+
+.work-card.style4:hover img {
+  filter: brightness(0.65);
+}
+
+.work-card.style4 .content {
+  position: relative;
+  z-index: 1;
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.work-card.style4 h2 {
+  font-size: 2rem;
+  margin-bottom: 14px;
+  font-weight: 700;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.8);
+}
+
+.work-card.style4 p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  text-shadow: 0 1px 5px rgba(0,0,0,0.7);
+}
+
+/* --- STYLE 5: Split vertical layout con animación --- */
+.workspace-card.style5 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0;
+  height: auto;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.workspace-card.style5 .split-left,
+.workspace-card.style5 .split-right {
+  flex: 1 1 50%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  padding: 25px;
+  box-sizing: border-box;
+}
+
+.workspace-card.style5 .split-left img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0;
+  transition: transform 0.5s ease;
+}
+
+.workspace-card.style5:hover .split-left img {
+  transform: scale(1.05);
+}
+
+.workspace-card.style5 .split-right {
+  background-color: #fefefe;
+  color: #222;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 40px;
+  opacity: 0;
+  animation: fadeInLeft 1s forwards;
+  animation-delay: 0.2s;
+}
+
+.workspace-card.style5 h2 {
+  font-size: 2rem;
+  margin-bottom: 14px;
+  font-weight: 700;
+  color: #0a3d62;
+}
+
+.workspace-card.style5 p {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  color: #555;
+}
+
+/* --- STYLE 6: Split horizontal pero con dirección invertida (imagen a la derecha) --- */
+.workspace-card.style6 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0;
+  height: auto;
+  border-radius: 12px;
+  overflow: hidden;
+  flex-direction: row-reverse;
+}
+
+.workspace-card.style6 .split-left,
+.workspace-card.style6 .split-right {
+  flex: 1 1 50%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  padding: 25px;
+  box-sizing: border-box;
+}
+
+.workspace-card.style6 .split-left img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0;
+  transition: transform 0.5s ease;
+}
+
+.workspace-card.style6:hover .split-left img {
+  transform: scale(1.05);
+}
+
+.workspace-card.style6 .split-right {
+  background-color: #fdfdfd;
+  color: #222;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 40px;
+  opacity: 0;
+  animation: fadeInLeft 1s forwards;
+  animation-delay: 0.2s;
+}
+
+.workspace-card.style6 h2 {
+  font-size: 2rem;
+  margin-bottom: 14px;
+  font-weight: 700;
+  color: #2563eb;
+}
+
+.workspace-card.style6 p {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  color: #444;
+}
+
+
+/* Animación para el texto */
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+
+/* 6. References card - lista simple con bordes */
+.references-card {
+  padding: 30px 30px 35px;
+  background: #e9f0ff;
+  border-left: 6px solid #2563eb;
+  border-radius: 12px;
+  color: #1e293b;
+}
+
+.references-card h2 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.references-card ul {
+  list-style: inside decimal;
+  font-size: 1rem;
+  line-height: 1.5;
+  padding-left: 10px;
+}
+
+.references-card ul li {
+  margin-bottom: 10px;
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+  .work-card.style1,
+  .work-card.style2 {
+    flex-direction: column;
+  }
+
+  .work-card.style1 img,
+  .work-card.style2 img {
+    max-width: 100%;
+    flex: none;
+    margin-bottom: 18px;
+    border-radius: 12px;
+  }
+
+  .work-card.style1 .content,
+  .work-card.style2 .content {
+    width: 100%;
+  }
+
+  .work-card.style4 {
+    padding: 40px 20px 35px;
+  }
+}
+
+@media (max-width: 480px) {
+  .intro-card h1 {
+    font-size: 2rem;
+  }
+
+  .work-card.style3 img {
+    max-width: 120px;
+  }
+
+  .work-card.style4 h2 {
+    font-size: 1.5rem;
+  }
+}
+

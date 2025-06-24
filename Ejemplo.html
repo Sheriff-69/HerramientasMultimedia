@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ejemplo</title>
+  <link rel="stylesheet" href="ejemplo.css" />
+</head>
+<body>
+
+  <header class="hero-video">
+    <video src="Imgs/progra.mp4" autoplay muted loop playsinline></video>
+    <div class="hero-text">
+      <h1>Despliega tu Proyecto Web</h1>
+    </div>
+  </header>
+
+  <main>
+    <section class="step parallax-sticky" id="paso1">
+      <div class="sticky-text">
+        <h2>Paso 1: Organiza tus archivos</h2>
+        <p>Antes de iniciar, asegúrate de tener esta estructura:</p> <br>
+        <ul>
+          <li><strong>/MiProyectoWeb</strong></li>
+          <li>├── index.html</li>
+          <li>├── EstilosBH.css</li>
+          <li>├── Elpo.js</li>
+          <li>├── /Imgs — logos, banners e íconos</li>
+          <li>├── /PDF's — documentos del curso</li>
+          <li>└── /Banner — imágenes del carrusel</li>
+        </ul> <br>
+        <p>Usa nombres sin tildes ni espacios para evitar errores al enlazar.</p>
+      </div>
+      <div class="parallax-img" style="background-image:url('Imgs/lach.jpg')"></div>
+    </section>
+
+    <section class="step step-2">
+      <h2>Paso 2: El corazón visual | El CSS</h2>
+      <div class="cards-container">
+        <div class="card">
+          <img src="Imgs/tipografia.png" alt="Tipografía" class="card-icon" />
+          <h3>CSS</h3>
+          <p>Controla colores, fuentes, espaciado y layout de tu sitio.</p>
+        </div>
+        <div class="card">
+          <img src="Imgs/colores.png" alt="Colores" class="card-icon" />
+          <h3>Enlace correcto</h3>
+          <p><code>&lt;link rel="stylesheet" href="Estilos.css" /&gt;</code></p>
+        </div>
+        <div class="card">
+          <img src="Imgs/resp.png" alt="Responsivo" class="card-icon" />
+          <h3>Diseño responsivo</h3>
+          <p>Visualiza tu diseño tal como lo imaginaste, en cualquier dispositivo.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="step step-3">
+      <div class="step-text"><h2>Paso 3: Dale vida | JavaScript</h2></div>
+      <div class="cube">
+        <div class="face front"><img src="Imgs/html.png" alt="HTML" /></div>
+        <div class="face back"><img src="Imgs/css.png" alt="CSS" /></div>
+        <div class="face right"><img src="Imgs/java.png" alt="JavaScript" /></div>
+        <div class="face left"><img src="Imgs/vscode.png" alt="Editor" /></div>
+        <div class="face top"><img src="Imgs/php.png" alt="Login" /></div>
+        <div class="face bottom"><img src="Imgs/interdemilan.png" alt="Carrusel" /></div>
+      </div>
+      <div class="step-text"><p class="cube-caption">Incluye tu script justo antes de <code>&lt;/body&gt;</code> para mejor rendimiento.</p></div>
+      
+    </section>
+
+    <section class="step step-4">
+      <h2>Paso 4: Abre tu página & Paso 5: Prueba como visitante</h2>
+      <div class="timeline">
+        <div class="entry">
+          <img src="Imgs/firefox.png" alt="Checklist" class="timeline-icon" />
+          <div class="entry-content">
+            <h3>Abrir en navegador</h3> <br>
+            <p>Haz doble clic en <code>index.html</code> y revisa todo el funcionamiento.</p>
+          </div>
+        </div>
+        <div class="entry">
+          <img src="Imgs/checklist+.png" alt="Inspector" class="timeline-icon" />
+          <div class="entry-content">
+            <h3>Checklist de pruebas</h3> <br>
+            <ul>
+              <li>¿Se ven las imágenes?</li>
+              <li>¿Abren los PDF's?</li>
+              <li>¿Funciona el login?</li>
+              <li>¿Se activa el scrollspy?</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="step new-cta">
+      <div class="final-panel">
+        <img src="Imgs/telaraña.png" alt="Celebración" class="final-img" />
+        <div class="final-message">
+          <h2>Paso 6: Sube tu página a la nube</h2>
+          <p>Comparte tu proyecto por Drive, GitHub Pages o Netlify. Asegúrate que los enlaces funcionen.</p> <br>
+          <a href="https://pages.github.com/" target="_blank" class="final-btn">Publicar en GitHub Pages</a>
+          <h3 class="conclusion">Conclusión</h3>
+          <p>Montar una web va más allá del código: se trata de orden, conexión precisa y pruebas constantes.</p>
+          <p class="dev-signature">Hecho por un desarrollador que ve el código como arte</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© 2025 UPIICSA • Herramientas Multimedia Web</p>
+  </footer>
+
+  <script src="ejemplo.js"></script>
+</body>
+</html>

@@ -81,28 +81,26 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-document.addEventListener("DOMContentLoaded", function () {
-    const sections = document.querySelectorAll("section[id]");
-    const navLinks = document.querySelectorAll('#MenuLateral a');
+document.addEventListener("DOMContentLoaded", function() {
+  const sections = document.querySelectorAll("main section[id]");
+  const navLinks = document.querySelectorAll('#MenuLateral a');
 
-    function onScroll() {
-        let scrollPos = window.scrollY || document.documentElement.scrollTop;
-        let current = "";
+  function onScroll() {
+    const scrollPos = window.scrollY || document.documentElement.scrollTop;
+    let currentId = '';
 
-        sections.forEach(section => {
-            if (scrollPos >= section.offsetTop - 110) {
-                current = section.getAttribute("id");
-            }
-        });
+    sections.forEach(section => {
+      const offsetTop = section.offsetTop;
+      if (scrollPos >= offsetTop - 120) {
+        currentId = section.id;
+      }
+    });
 
-        navLinks.forEach(link => {
-            link.classList.remove("active");
-            if (link.getAttribute("href") === "#" + current) {
-                link.classList.add("active");
-            }
-        });
-    }
+    navLinks.forEach(link => {
+      link.classList.toggle('active', link.getAttribute('href') === '#' + currentId);
+    });
+  }
 
-    window.addEventListener("scroll", onScroll);
+  window.addEventListener('scroll', onScroll);
+  onScroll();
 });
-

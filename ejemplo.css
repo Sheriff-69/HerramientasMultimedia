@@ -1,0 +1,266 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: sans-serif;
+  background: #111;
+  color: #eee;
+}
+
+.hero-video {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.hero-video video {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  top: 0;
+  left: 0;
+}
+
+.hero-text {
+  position: relative;
+  z-index: 1;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+  color: #fff;
+  animation: fadeIn 2s;
+}
+
+.parallax-sticky {
+  display: flex;
+  min-height: 100vh;
+  position: relative;
+}
+
+.sticky-text {
+  flex: 1;
+  position: sticky;
+  top: 20vh;
+  padding: 2rem;
+}
+
+.parallax-img {
+  flex: 1;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.step-2,
+.step-4 {
+  padding: 4rem 2rem;
+  background: #1a1a1a;
+  color: #eee;
+}
+
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 2rem;
+}
+
+.card {
+  background: #222;
+  border-radius: 12px;
+  padding: 1.5rem;
+  width: 300px;
+  box-shadow: 0 0 10px rgba(0, 201, 255, 0.2);
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card-icon {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 1rem;
+  filter: drop-shadow(0 0 5px #00c9ff80);
+}
+
+.step-3 {
+  position: relative;
+  height: 80vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #1e1e1e;
+}
+
+.step-3 .step-text {
+  max-width: 500px;
+  margin-left: 2rem;
+  text-align: left;
+  color: white;
+}
+
+.step-3 .cube {
+  width: 200px;
+  height: 200px;
+  margin: 1rem auto 1rem;
+  transform-style: preserve-3d;
+  animation: rotateCube 40s infinite linear;
+}
+
+.face img {
+  width: 150px;
+  height: 150px;
+}
+
+.step-3 .face {
+  width: 200px;
+  height: 200px;
+  background: rgba(0, 200, 255, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #00c9ff;
+  position: absolute;
+}
+
+.cube {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  transform-style: preserve-3d;
+  animation: rotateCube 15s infinite linear;
+}
+
+.face {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 200, 255, 0.2);
+  border: 2px solid #00c9ff;
+}
+
+.front  { transform: rotateY(0deg) translateZ(100px); }
+.back   { transform: rotateY(180deg) translateZ(100px); }
+.right  { transform: rotateY(90deg) translateZ(100px); }
+.left   { transform: rotateY(-90deg) translateZ(100px); }
+.top {
+  transform: rotateX(90deg) translateZ(100px);
+}
+
+.bottom {
+  transform: rotateX(-90deg) translateZ(100px);
+}
+top     { transform: rotateX(90deg) translateZ(100px); }
+bottom  { transform: rotateX(-90deg) translateZ(100px); }
+
+.cube-caption {
+  color: #ccc;
+  margin-top: 1rem;
+}
+
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.entry {
+  background: #222;
+  border-radius: 8px;
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.timeline-icon {
+  width: 40px;
+  height: 40px;
+  filter: drop-shadow(0 0 5px #00c9ff90);
+}
+
+.new-cta {
+  background: linear-gradient(to right, #141e30, #243b55);
+  color: #fff;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.final-panel {
+  max-width: 800px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+}
+
+.final-img {
+  width: 60%;
+  max-width: 300px;
+  border-radius: 12px;
+  margin-bottom: 1.5rem;
+}
+
+.final-message h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.final-message h3.conclusion {
+  margin-top: 2rem;
+  font-size: 1.5rem;
+}
+
+.final-btn {
+  background: #00c6ff;
+  color: #000;
+  padding: 10px 20px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 1rem;
+  transition: background 0.3s;
+}
+
+.final-btn:hover {
+  background: #00a2cc;
+}
+
+.footer {
+  text-align: center;
+  padding: 2rem;
+  background: #000;
+  color: #888;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes rotateCube {
+  0%   { transform: rotateX(0deg) rotateY(0deg); }
+  100% { transform: rotateX(360deg) rotateY(360deg); }
+}

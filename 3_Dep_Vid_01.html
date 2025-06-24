@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entornos Virtuales</title>
+    <link rel="stylesheet" href="EstilosBH.css" />
+</head>
+
+<body>
+    <div id="Yandel"> 
+        <div id="Superior">
+            <header>
+                <img width="40px" alt="IPN Logo" src="imgs/logo-upiicsa.png" />
+                    <div class="TextoLeyenda">
+                        <h1>Instituto Politécnico Nacional</h1>
+                        <p>"La técnica al servicio de la patria"</p>
+                    </div>
+                    <div class="TextoDerecha">
+                        <p>Equipo 3 | 2CV21</p>
+                        <h1>Herramientas Multimedia</h1>
+                    </div>
+            </header>
+        </div>
+    
+        <div id="MenuPrincipal">
+            <nav>
+                <ul>
+                    <li>
+                        <a href="index.html">Inicio</a>
+                    </li>
+                    <li>
+                        <a href="AlumnosBH.html">Integrantes</a>
+                    </li>
+                    <li>
+                        <a href="Tareas Individuales.html">Tareas Individuales</a>
+                    </li>
+                    <li>
+                        <a href="Tareas Grupales.html">Tareas Grupales</a>
+                    </li>
+                    <li>
+                        <a href="Curso.html">Curso</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+<div id="Medio">
+    <div id="MenuLateral">
+        <article class="article">
+            <h2><a href="#seccion1">¿Cómo editar un vídeo?</a></h2> <br>
+            <h2><a href="#seccion2">Comprender el objetivo del vídeo</a></h2> <br>        
+            <h2><a href="#seccion3">Selección de software de edición</a></h2> <br>
+            <h2><a href="#seccion4">Flujo de trabajo técnico (pipeline de edición)</a></h2> <br>
+            <h2><a href="#seccion5">Narrativa visual y principios estéticos</a></h2> <br>
+            <h2><a href="#seccion6">Tratamiento de audio</a></h2> <br>
+            <h2><a href="#seccion7">Exportación y compresión</a></h2> <br>
+            <h2><a href="#seccion8">Conclusión</a></h2> <br>
+            <h2><a href="#seccion9">Referencias</a></h2>
+        </article>
+    </div>
+
+<main class="content-container">
+    <div id="workspace">
+  <section id="seccion1" class="workspace-card intro-card">
+    <img src="imgs/Elunico.gif" alt="Imagen introductoria" />
+    <h1>¿Cómo editar un vídeo?</h1>
+    <p>Entender cómo se edita un vídeo no solo implica conocer el uso de herramientas, sino también comprender los principios narrativos, técnicos y computacionales que intervienen en la postproducción.</p>
+  </section>
+
+  <section id="seccion2" class="workspace-card work-card style4">
+    <img src="imgs/whike.png" alt="Tema 4 imagen" />
+    <div class="content">
+      <h2>Comprender el objetivo del vídeo</h2>
+      <p>¿Es un video explicativo, un tutorial técnico, un promocional, o una demostración de software?</p>
+      <p>¿Cuál es el público objetivo (clientes, comunidad académica, usuarios finales)?</p>
+      <p>¿Qué emociones, ideas o conocimientos se quieren transmitir?</p>
+      <p>¿En qué plataforma se publicará (YouTube, LMS, redes sociales, sitio institucional)?</p> <br>
+      <p>Estas decisiones influirán directamente en la estructura narrativa, la resolución del vídeo, el formato de exportación y el tono general de la edición.</p>
+    </div>
+  </section>
+
+<section id="seccion3" class="workspace-card work-card style3" >
+    <div class="background-image" style="background-image: url('imgs/topos.jpg');">
+      <div class="overlay-text">
+        <h2>Selección de software de edición</h2>
+        <p>Dependiendo del nivel de complejidad del proyecto, se puede optar por distintas herramientas:</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="workspace-card work-card style1">
+    <img src="imgs/vende.jpg" alt="Tema 1 imagen" />
+    <div class="content">
+      <h3>Básico y rápido</h3>
+      <p>• Clipchamp (Microsoft): basado en navegador, ideal para proyectos simples.</p>
+      <p>• CapCut: popular por su integración con redes sociales, incluye plantillas inteligentes.</p> <br>
+      <h3>Profesional y técnico</h3>
+      <p>• Adobe Premiere Pro: estándar en la industria, con amplio soporte para plugins y color grading.</p>
+      <p>• DaVinci Resolve: destaca por su motor de corrección de color y opciones de postproducción de audio.</p>
+      <p>• Final Cut Pro (macOS): utilizado profesionalmente por creadores de contenido en entornos Apple.</p> <br>
+      <h3>Código abierto / Gratuito:</h3>
+      <p>• Kdenlive y Shotcut: soluciones multiplataforma útiles para ambientes Linux.</p>
+      <p>• Blender: aunque se centra en 3D, permite edición de vídeo no lineal con una curva de aprendizaje mayor.</p>
+    </div>
+  </section>
+
+  <section id="seccion4" class="workspace-card work-card style2">
+    <img src="imgs/editts.gif" alt="Tema 2 imagen" />
+    <div class="content">
+      <h2>Flujo de trabajo técnico (pipeline de edición)</h2>
+      <p>El flujo de trabajo estándar para la edición de vídeo incluye los siguientes pasos:</p> <br>
+      <h3>Ingesta y organización de material</h3>
+      <p>• Importar todos los archivos de vídeo, audio y gráficos.</p>
+      <p>• Establecer una estructura de carpetas: /raw, /audio, /images, /exports, /project-files.</p>
+      <p>• Crear proxies si se trabaja con archivos 4K o RAW para mejorar el rendimiento.</p> <br>
+      <h3>Montaje inicial (rough cut)</h3>
+      <p>• Colocar los clips en la línea de tiempo en orden cronológico o temático.</p>
+      <p>• Realizar cortes básicos (trimming) y eliminación de errores o material irrelevante.</p>
+      <p>• Asegurar continuidad visual y auditiva.</p><br>
+      <h3>Edición fina (fine cut)</h3>
+      <p>• Refinar transiciones, aplicar correcciones de color (color grading) y mejorar la sincronización de audio.</p>
+      <p>• Insertar elementos gráficos: lower thirds, intros/outros, logotipos, etc.</p>
+      <p>• Añadir efectos visuales (VFX), si corresponde.</p>
+    </div>
+  </section>
+
+  <section id="seccion5" class="workspace-card work-card style4">
+    <img src="imgs/runner2.gif" alt="Tema 4 imagen" />
+    <div class="content">
+      <h2>Narrativa visual y principios estéticos</h2>
+      <p>Aunque desde la informática se puede abordar la edición de forma funcional, no se deben ignorar los principios estéticos y narrativos:</p> <br>
+      <h3>Regla de los tercios</h3>
+      <p>Guía visual para la composición de las tomas.</p> <br>
+      <h3>Ritmo visual</h3>
+      <p>Alternancia de planos cortos/largos que marca la cadencia del mensaje.</p> <br>
+      <h3>Coherencia cromática</h3>
+      <p>Uso consistente de paletas de color para transmitir emociones.</p> <br>
+      <h3>Tipografía</h3>
+      <p>Debe ser legible, profesional y consistente con el branding del vídeo.</p>
+    </div>
+  </section> <br> <br> <br>
+
+    <section id="seccion6" class="workspace-card work-card style1">
+      <img src="imgs/audio.jpg" alt="Tema 1 imagen" />
+      <div class="content">
+        <h2>Tratamiento de audio</h2>
+        <p>Una buena edición de vídeo depende en gran parte de un audio claro y balanceado.</p> <br>
+        <h3>Normalización</h3>
+        <p>• Ajustar el volumen para mantenerlo entre -6 dB y -12 dB.</p> <br>
+        <h3>Eliminación de ruido</h3>
+        <p>• Uso de plugins como DeNoise (Premiere) o herramientas como Audacity.</p> <br>
+        <h3>Música de fondo</h3>
+        <p>• Usar pistas libres de derechos (Creative Commons o licencias pagadas).</p> <br>
+        <h3>Narración o voice-over</h3>
+        <p>• Grabación en estudio o con micrófonos direccionales para evitar reverberación.</p>
+      </div>
+    </section>
+
+  <section id="seccion7" class="workspace-card work-card style2">
+    <img src="imgs/dembo.jpg" alt="Tema 2 imagen" />
+    <div class="content">
+      <h2>Exportación y compresión</h2>
+      <p> Al exportar, se deben considerar:</p> <br>
+      <p>• Resolución estándar: 1920x1080 (Full HD), aunque algunos proyectos pueden requerir 4K.</p>
+      <p>• Códec: H.264 (MP4) es el más utilizado por su equilibrio entre calidad y compresión.</p>
+      <p>• Bitrate: para web, entre 8 Mbps y 12 Mbps es adecuado para 1080p; 35-45 Mbps para 4K.</p>
+      <p>• Formato de archivo: MP4 para distribución general, MOV para master o edición posterior.</p> <br>
+      <p>Además, si el vídeo se va a subir a una plataforma LMS o se insertará en una página web, es recomendable incluir también una versión comprimida y una miniatura estática optimizada (JPEG o WebP).</p>
+    </div>
+  </section> <br><br><br>
+
+    <section id="seccion8" class="workspace-card work-card style3">
+    <div class="background-image" style="background-image: url('imgs/tano.jpg');">
+      <div class="overlay-text">
+        <h2>Conclusión</h2>
+        <p>La edición de vídeo es una disciplina que combina creatividad, pensamiento lógico y habilidades técnicas. Para estudiantes de informática, dominar estas herramientas no solo amplía su perfil profesional, sino que les permite comunicar ideas complejas de manera visual, construir material educativo de calidad y participar activamente en la economía del contenido digital.</p> <br>
+        <p>Con práctica y criterio técnico, la edición deja de ser una simple manipulación de clips para convertirse en una forma de programación visual donde cada corte y transición tiene una intención funcional y estética.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="seccion9" class="workspace-card references-card">
+    <h2>Referencias</h2>
+    <ul>
+      <li>Pasenme referencias banda</li>
+      <li>Pasenme referencias banda</li>
+      <li>Pasenme referencias banda</li>
+      <li>Pasenme referencias banda</li>
+      <li>Pasenme referencias banda</li>
+      <li>Pasenme referencias banda</li>
+      <li>Pasenme referencias banda</li>
+    </ul>
+  </section>
+</div>
+  </main>
+</div>    
+
+<div id="Derechos">
+    <footer>
+        <div class="contenido">
+                <img width="220px" alt="UPIICSA" src="imgs/Letras Upiicsa.png" />
+            <div class="contenidotexto">
+                <h1>Unidad Profesional Interdisciplinaria de Ingeniería<br>
+                    Ciencias Sociales y Administrativas IPN</h1>
+                <h2>Av. Té 950, Granjas México, Iztacalco, 08400 Ciudad de México, CDMX</h2>
+                <h3>Teléfono: +52 55 5624 2000</h3>
+            </div>
+        </div>
+        <div class="Contacto">
+            <p> 
+                Contáctanos  <br>
+                +52 2282708349  |  3396ufk@gmail.com
+            </p>
+            
+            <a href="https://twitter.com/nycq" target="_blank"> 
+                <img width="40px" alt="Twitterogo" src="imgs/Twitter.png" />
+            </a>
+            <a href="https://facebook.com/profile.php?id=100009090850392" target="_blank"> 
+                <img width="40px" alt="Facebooklogo" src="imgs/Facebook.png" />
+            </a>
+            <a href="https://instagram.com/nycq_69" target="_blank"> 
+                <img width="40px" alt="Instagramlogo" src="imgs/Instagram_icon.png" />
+            </a>
+       </div>
+        
+        <div class="infocentro">
+            <p>Esta página está destinada exclusivamente para la revisión de tareas y actividades de la materia
+                [Herramientas Multimedia (2025/2, UPlICSA)]
+                <br>
+                Los usuarios pueden acceder y consultar el contenido con fines educativos y personales
+                <br>
+                Se permite compartir enlaces a esta página, pero no se autoriza la copia ni distribución de su contenido sin permiso explícito previo
+            </p>
+            <p> Hecho en México, Instituto Politécnico Nacional (IPN), todos los derechos reservados 2025.
+                Esta página puede ser reproducida con fines no lucrativos, siempre y cuando no se mutile, se cite la fuente completa y su dirección electrónica.
+                De otra forma, requiere permiso previo por escrito de el desarrollador principal
+            </p>
+                <br>
+                <p>Última actualización: 16/03/2025</p>
+        </div>
+    </footer>
+</div>
+</body>
+</html>
